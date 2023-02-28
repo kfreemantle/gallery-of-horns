@@ -80,15 +80,15 @@ Estimate of time needed to complete: 1 hr
 
 Start time: 1330
 
-Finish time: _____
+Finish time: 1428
 
-Actual time needed to complete: _____
+Actual time needed to complete: Jeezy petes, 58 minutes!  It was less! It's never less!
 
 #### Feature 2 - Allow Users to Favorite Individual Beasts
 
 Estimate of time needed to complete: 1 hr
 
-Start time: _____
+Start time: 1444
 
 Finish time: _____
 
