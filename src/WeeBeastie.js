@@ -8,7 +8,7 @@ class WeeBeastie extends React.Component {
       <>
         <article>
           <h2>{this.props.title}</h2>
-          <img src={this.props.imageURL} alt={this.props.alt} title={this.alt.title} ></img>
+          <img src={this.props.imageURL} alt={this.props.alt} title={this.props.title} ></img>
           <p>{this.props.description}</p>
 
         </article>
