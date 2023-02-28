@@ -10,7 +10,7 @@ class App extends React.Component {
         <header>
           <h1>The Wee Beasties of Code 301</h1>);
         </header>
-        <Main/>
+        <Main />
         {/* <main></main>   // might not need this at all?*/}
 
         <footer>&reg; Kyle Freemantle - 2023</footer>

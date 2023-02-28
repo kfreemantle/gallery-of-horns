@@ -30,13 +30,8 @@ class Main extends React.Component {
           alt='rhinocerousBeetleAlt'
           description='Rhinoceros beetles are a subfamily of the scarab beetle family. Other common names for rhinoceros beetles include Hercules beetles, unicorn beetles or horn beetles. Over 1500 species and 225 genera of rhinoceros beetles are known.'
         />
-        <WeeBeastie
-          title=
-          imageURL=
-          alt=
-          description=
-        />
-      
+
+
       </main>
     )
   }
