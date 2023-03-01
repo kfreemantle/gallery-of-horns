@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';  // is this not needed?
-import Card from 'react-bootstrap/Card';  
+import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 // import './WeeBeastie.css';  do we just not use this now that we have bootstrap.min.css to call on?
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +28,7 @@ class WeeBeastie extends React.Component {
       favorites: 0,
       // demo used true/false functions here, but aren't needed in feature 2, I think.
     };
-  } 
+  }
 
   // we need a function to process the favorites.  It'll be called later when we use onClick methods to actually handle the button clicks.  I'm calling it processFavorites because it's not really an event handler.
   processFavorites = () => {
@@ -38,28 +38,28 @@ class WeeBeastie extends React.Component {
   }
 
   render() {
-     return (
-      <Col style={{margin: '1.8rem'}}>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img
-         variant="top"  //not clear what 'variant' does
-         src={this.props.image_url}
-         alt={this.props.alt}
-         title={this.props.title}
-         className='beasties'
-        />
-      <Card.Body>
-        <Card.Title>{this.props.title}</Card.Title>
-        <Card.Text>{this.props.description}</Card.Text>
-        <Button 
-          variant="primary" 
-          onClick={this.processFavorites}
-          >¡Saluda a la pequeña bestia!
-        </Button>
-        <p>💕 {this.state.favorites} Favorites!</p>
-      </Card.Body>
-    </Card>
-     </Col>
+    return (
+      <Col style={{ margin: '1.8rem' }}>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img
+            variant="top"  //not clear what 'variant' does
+            src={this.props.image_url}
+            alt={this.props.alt}
+            title={this.props.title}
+            className='beasties'
+          />
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>{this.props.description}</Card.Text>
+            <Button
+              variant="primary"
+              onClick={this.processFavorites}
+            >¡Saluda a la pequeña bestia!
+            </Button>
+            <p>💕 {this.state.favorites} Favorites!</p>
+          </Card.Body>
+        </Card>
+      </Col>
     );
   };
 };
