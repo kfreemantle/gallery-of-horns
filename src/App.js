@@ -1,6 +1,11 @@
 import React from 'react';
+import Header from './Header';
 import Main from './Main.js';
+import Footer from './Footer';
 import data from './data.json';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends React.Component {
@@ -8,13 +13,15 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <header>
-          <h1>The Wee Beasties of Code 301</h1>);
-        </header>
-        <Main data={data}/>
-        
+        <Header />
+        <Container>
+          <Row>
+            <Main data={data} />
+          </Row>
+        </Container>
+        <Footer />
 
-        <footer>&reg; Kyle Freemantle - 2023</footer>
+
       </>
     );
   };

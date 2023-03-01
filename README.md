@@ -90,16 +90,24 @@ Estimate of time needed to complete: 1 hr
 
 Start time: 1444
 
-Finish time: _____
+Finish time: 1516
 
-Actual time needed to complete: _____
+Actual time needed to complete: 32 minutes! !!   !!!!!!1one
 
 #### Feature 3 - Bootstrap
 
 Estimate of time needed to complete: 2 hr
 
-Start time: _____
+Start time: 2100
 
 Finish time: _____
 
 Actual time needed to complete: _____
+
+
+### Acknowledgments 
+
+- Kam Watts had good examples of Header and Footer .js files that I checked mine against.
+
+- Sheyna Watkins took time to explain the data flow to me with regards to the data.json file.  The 'import' terminology was confounding me, and I mentally had the flow reversed.
+

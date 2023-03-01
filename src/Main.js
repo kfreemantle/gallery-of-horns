@@ -1,44 +1,54 @@
 import React from 'react';
 import WeeBeastie from './WeeBeastie';
 import './Main.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
-// Feature #2: Allow Users to Favorite Individual Beasts
+// Feature 3: Bootstrap
 // Why are we implementing this feature?
-// As a user, I want to be able to interact with the site and favorite beasts.
+// As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
 // What are we going to implement?
 // Given that a user opens the application in the browser
-// When a user clicks on an image of a beast
-// Then the number of "Favorites" displayed on that beast will increase by one.
+// When the images are displayed on the screen
+// Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
 // How are we implementing it?
-// Create state inside of the HornedBeast component that keeps track of the number of times each beast has been favorited.
-
-// Put a heart in each HornedBeast component with the number of “Favorites” next to it.
+// Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
 
 class Main extends React.Component {
 
   render() {
 
     let beasties = [];  // array for storing the beasties as they're called from data.json
-    
+
     // the forEach loop uses props to fill in the data from data.json and make a new object in the array for each beast at each index.
-    this.props.data.forEach((beast, idx) => {
+    this.props.data.forEach((beast) => {
       beasties.push(
         <WeeBeastie
           title={beast.title}
           image_url={beast.image_url}
           description={beast.description}
-          key={idx}
-          />
-          // to the beasties array we're pushing the title, image_url, description and key(index) values that are referenced in the data.json file.
+          horns={beast.horns}
+          keyword={beast.keyword}
+          key={beast._id}
+        />
+
       )
 
     })
-    
-    
+
+
     return (
-      <main>
-        {beasties} 
-      </main>
+      <>
+        <body>
+          <Container>
+            <Row>
+              <main>
+                {beasties}
+              </main>
+            </Row>
+          </Container>
+        </body>
+      </>
     ) // the main tags contain the beasties array, which will be filled with the components from data.json
   }
 };
