@@ -17,8 +17,8 @@ class SelectedWeeBeastie extends React.Component {
 
     return ( 
       <Modal 
-        show={show} 
-        onHide={handleClose} 
+        show={this.props.show} 
+        onHide={this.props.onHide} 
         centered>
         <Modal.Header closeButton>
           <Modal.Title>{this.props.selected.title}</Modal.Title>

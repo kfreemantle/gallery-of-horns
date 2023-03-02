@@ -37,10 +37,13 @@ class WeeBeastie extends React.Component {
     });
   }
 
+  
+
   //  modeled off of the handleHeaderClick in the demo
   handleClick = () => {
+    console.log(this.props.title);
     this.processFavorites();
-    this.props.openModal(this.props.title, this.props.description, this.props.image_url);
+    this.props.handleOpenModal(this.props.image_url, this.props.description, this.props.title);
   }
 
   render() {
@@ -49,6 +52,7 @@ class WeeBeastie extends React.Component {
         <Card 
           style={{width:  '18rem'}}
           className='beastieCard'>
+          
           <Card.Img
             variant="top"  //not clear what 'variant' does
             src={this.props.image_url}

@@ -22,6 +22,7 @@ class App extends React.Component {
       beastieTitle: '',
       beastieDescription: '',
       beastieImgURL: '',
+      selected: '',
     }
   }  // this is the default starting state, with these properties passed to child components.  Still don't really get how constructor/super works, but I know it needs to be there.
 
@@ -41,12 +42,15 @@ class App extends React.Component {
   }
 
   handleOpenModal = (image_url, description, title) => {
+    console.log(description);
     this.setState ({
       isModalOpen: true,
-      //beastieImgClicked: true,
-      beastieImgURL: image_url,
-      beastieDescription: description, 
-      beastieTitle: title, 
+      // beastieImgClicked: true,
+      selected: {
+        image_url: image_url,
+        description: description, 
+        title: title, 
+      }
     })
   }
 
@@ -58,14 +62,14 @@ class App extends React.Component {
           <Row>
             <Main 
               data={data} 
-              openModal={this.handleOpenModal} />
+              handleOpenModal={this.handleOpenModal} />
           </Row>
         </Container>
         <Footer />
         <SelectedWeeBeastie 
           show={this.state.isModalOpen} 
           onHide={this.handleCloseModal}
-          selected={this.state} />
+          selected={this.state.selected} />
           
 
 

@@ -25,8 +25,7 @@ class Main extends React.Component {
     let beasties = [];  // array for storing the beasties as they're called from data.json
 
     // the forEach loop uses props to fill in the data from data.json and make a new object in the array for each beast at each index.
-    this.props.data.forEach((beast) => {
-      beasties.push(
+    let beast = this.props.data.map((beast) => (
         <WeeBeastie
           title={beast.title}
           image_url={beast.image_url}
@@ -40,7 +39,7 @@ class Main extends React.Component {
 
       )
 
-    })
+    )
 
 
     return (
@@ -49,7 +48,7 @@ class Main extends React.Component {
           <Container>
             <Row>
               <main>
-                {beasties}
+                {beast}
               </main>
             </Row>
           </Container>
