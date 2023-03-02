@@ -4,15 +4,19 @@ import './Main.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-// Feature 3: Bootstrap
+// Feature #1: Display a Modal
 // Why are we implementing this feature?
-// As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
+// As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.
 // What are we going to implement?
-// Given that a user opens the application in the browser
-// When the images are displayed on the screen
-// Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
+// Given that a user wants to view the details of the image
+// When the user clicks on an individual image
+// Then the image should render larger on the screen with the description displayed
 // How are we implementing it?
-// Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
+// Import the data.json file into your App component and send that data into the Main component
+// Map over the JSON data in your Main component to render each beast
+// Send a function into your Main component that allows the user to update state in the App
+// Create a SelectedBeast component and include it in your App
+// Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
 
 class Main extends React.Component {
 
@@ -29,6 +33,8 @@ class Main extends React.Component {
           description={beast.description}
           horns={beast.horns}
           keyword={beast.keyword}
+          giveHearts={this.props.giveHearts}
+          handleOpenModal={this.props.handleOpenModal}
           key={beast._id}
         />
 

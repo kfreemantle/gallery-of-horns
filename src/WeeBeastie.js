@@ -1,21 +1,21 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';  // is this not needed?
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-// import './WeeBeastie.css';  do we just not use this now that we have bootstrap.min.css to call on?
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './WeeBeastie.css';
 
-// added button and card functionality from React, using copypasta from https://react-bootstrap.github.io/components/buttons/ and https://react-bootstrap.github.io/components/cards/ for basic functionality and styling
-
-// Feature 3: Bootstrap
+// Feature #1: Display a Modal
 // Why are we implementing this feature?
-// As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
+// As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.
 // What are we going to implement?
-// Given that a user opens the application in the browser
-// When the images are displayed on the screen
-// Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
+// Given that a user wants to view the details of the image
+// When the user clicks on an individual image
+// Then the image should render larger on the screen with the description displayed
 // How are we implementing it?
-// Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
+// Import the data.json file into your App component and send that data into the Main component
+// Map over the JSON data in your Main component to render each beast
+// Send a function into your Main component that allows the user to update state in the App
+// Create a SelectedBeast component and include it in your App
+// Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
 
 
 class WeeBeastie extends React.Component {
@@ -26,7 +26,7 @@ class WeeBeastie extends React.Component {
     super(props);
     this.state = {
       favorites: 0,
-      // demo used true/false functions here, but aren't needed in feature 2, I think.
+      
     };
   }
 
@@ -37,26 +37,34 @@ class WeeBeastie extends React.Component {
     });
   }
 
+  //  modeled off of the handleHeaderClick in the demo
+  handleClick = () => {
+    this.processFavorites();
+    this.props.openModal(this.props.title, this.props.description, this.props.image_url);
+  }
+
   render() {
     return (
-      <Col style={{ margin: '1.8rem' }}>
-        <Card style={{ width: '18rem' }}>
+      <Col>
+        <Card 
+          style={{width:  '18rem'}}
+          className='beastieCard'>
           <Card.Img
             variant="top"  //not clear what 'variant' does
             src={this.props.image_url}
             alt={this.props.alt}
             title={this.props.title}
-            className='beasties'
+            onClick={this.handleClick}
+            // className='beasties'
+            // className beasties caused a problem here in the demo
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Button
-              variant="primary"
-              onClick={this.processFavorites}
-            >¡Saluda a la pequeña bestia!
-            </Button>
-            <p>💕 {this.state.favorites} Favorites!</p>
+            <Card.Text>
+              {this.state.favorites === 0 ? `💔 loved ${this.state.favorites} times!` : `💕 loved ${this.state.favorites} times`}
+              </Card.Text>
+              {/* Not gonna lie, I don't understand how this W?T:F part works. */}
           </Card.Body>
         </Card>
       </Col>

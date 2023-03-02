@@ -105,10 +105,27 @@ Finish time: 2221
 Actual time needed to complete: 1.3 hours, so better!
 
 
+### Lab 03
+
+#### Feature 1 - Display a Modal
+
+Estimate of time needed to complete: 4 hours
+
+Start time: ~1700
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+
 ### Acknowledgments 
+
+#### Lab 02
 
 - Kam Watts had good examples of Header and Footer .js files that I checked mine against.
 
 - Sheyna Watkins took time to explain the data flow to me with regards to the data.json file.  The 'import' terminology was confounding me, and I mentally had the flow reversed.
 
 - I had trouble getting my pictures to render uniformly and couldn't make it work from the ReactBootstrap card documentation, but I was able to fix it by referring to Michael Dulin's repo.
+
+- The following morning before and after code review 

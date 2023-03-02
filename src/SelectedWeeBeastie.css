@@ -1,0 +1,6 @@
+.modal-body img {
+  height: 100%;
+  width: 100%;
+}
+
+/* More styling needed?  I think the only thing we care about here is how it affects the image when we select a wee beastie. */
