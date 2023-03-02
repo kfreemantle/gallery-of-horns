@@ -113,9 +113,9 @@ Estimate of time needed to complete: 4 hours
 
 Start time: ~1700
 
-Finish time: _____
+Finish time: 2130
 
-Actual time needed to complete: _____
+Actual time needed to complete: 4.5 hours, still not done
 
 
 ### Acknowledgments 
@@ -128,4 +128,8 @@ Actual time needed to complete: _____
 
 - I had trouble getting my pictures to render uniformly and couldn't make it work from the ReactBootstrap card documentation, but I was able to fix it by referring to Michael Dulin's repo.
 
-- The following morning before and after code review 
+- The following morning before and after code review Anthony Keith was helpful in showing me what I was doing wrong with my cards CSS, but I wasn't successful in implementing his suggestions.
+
+#### Lab 03
+
+- I'm really struggling with this one but I got some help by referencing Anthony Keith and Jonathan Tsai's repos to get my syntax working a bit better for Modals.  I'm still missing a lot of what I'm supposed to be doing and the images are not popping up on click, but I'm going to have to work on it later.
