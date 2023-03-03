@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 // // Feature 1. Filter by Numbers of Horns
 // Why are we implementing this feature?
 // As a user, I want to be able to view the beasts by the number of horns
@@ -38,7 +39,7 @@ class HornForm extends React.Component {
       
       <ListGroup.Item key={idx}>
         {beast}
-      </ListGroup.Item>;
+      </ListGroup.Item>
     })
 
     return (
