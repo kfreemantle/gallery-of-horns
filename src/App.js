@@ -80,8 +80,12 @@ class App extends React.Component {
       this.setState({filterData: processedData})
       
 
-  }   else  {  // the final else is saying if the filter doesn't equal 1 AND it doesn't equal 2 AND it doesn't equal 3 then capture that and put it into the state.
-      let processedData = data.filter(num => num.horns !== 1 && num.horns !==2 && num.horns !== 3 );
+    } else if (this.state.howToSortSelected === 'fourPlus') {
+      let processedData = data.filter(num => num.horns >= 4);
+      this.setState({filterData: processedData})
+  
+    } else  {  // the final else is saying if the filter doesn't equal 1 AND it doesn't equal 2 AND it doesn't equal 3 then capture that and put it into the state.
+      let processedData = data.filter(num => num.horns !== 1 && num.horns !==2 && num.horns !== 3 && num.horns >= 4);
       this.setState({filterData: processedData})
 
   }
