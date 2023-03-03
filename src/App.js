@@ -85,6 +85,7 @@ class App extends React.Component {
       this.setState({filterData: processedData})
 
   }
+}
 
   // What do we do when we change our selected form filter?
   // I definitely didn't get how state change is 'slow'
@@ -97,7 +98,7 @@ class App extends React.Component {
 
 
 
-  render() {  // what the fuck, syntax
+  render() {  
     return (
       <>
         <Header />
