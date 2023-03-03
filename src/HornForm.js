@@ -34,6 +34,7 @@ class HornForm extends React.Component {
 
     // let numbers = this.state.filteredData.map((num, idx) => <ListGroup.Item key={idx}>{num}</ListGroup.Item>)
     // ^^ this is what Sheyna's demo code was looking like, it's functionally identical
+    // I disabled some linter rules that were preventing Netifly from deploying here.
 
     let selectedHorns = this.props.filterData.map((beast, idx) => {
       
