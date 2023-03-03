@@ -23,7 +23,7 @@ class Main extends React.Component {
   render() {
 
     let beasties = [];  // array for storing the beasties as they're called from data.json
-
+    
     // the forEach loop uses props to fill in the data from data.json and make a new object in the array for each beast at each index.
     let beast = this.props.data.map((beast) => (
         <WeeBeastie
