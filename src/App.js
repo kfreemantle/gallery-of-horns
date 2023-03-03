@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import SelectedWeeBeastie from './SelectedWeeBeastie';
-// import Modal from 'react-bootstrap/Modal';
+import HornForm from './HornForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import data from './data.json';
@@ -29,11 +29,11 @@ class App extends React.Component {
 
   // BeastModal functions
 
-  // giveHearts = () => {
-  //   this.setState ({
-  //     hearts: this.state.hearts + '❣️'
-  //   })
-  // }
+  giveHearts = () => {
+    this.setState ({
+      hearts: this.state.hearts + '❣️'
+    })
+  }
 
   handleCloseModal = () => {
     this.setState ({

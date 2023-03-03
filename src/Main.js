@@ -54,7 +54,7 @@ class Main extends React.Component {
           </Container>
         </body>
       </>
-    ) // the main tags contain the beasties array, which will be filled with the components from data.json
+    ) // the main tags contain the beast array, which will be filled with the components from data.json
   }
 };
 

@@ -118,6 +118,19 @@ Finish time: 2130
 Actual time needed to complete: 4.5 hours, still not done
 
 
+### Lab 04
+
+#### Feature 1 - Filter by number of horns
+
+Estimate of time needed to complete: 3 hours
+
+Start time: ~1600
+
+Finish time: 
+
+Actual time needed to complete: 
+
+
 ### Acknowledgments 
 
 #### Lab 02
@@ -135,3 +148,9 @@ Actual time needed to complete: 4.5 hours, still not done
 - I'm really struggling with this one but I got some help by referencing Anthony Keith and Jonathan Tsai's repos to get my syntax working a bit better for Modals.  I'm still missing a lot of what I'm supposed to be doing and the images are not popping up on click, but I'm going to have to work on it later.
 
 - After getting some help from student Anthony Keith and TAs Brandon Mizutani and Justin Hamerly, I got Modals working properly.  The order in which I passed image_src, title and description in the openModal function was incorrect, so the URL was displayed as a title.
+
+#### Lab 04
+
+- I got some guidance from Lauren Perkins at the start of the lab, as she'd made some similar errors to me in lab 03 and got some help earlier in the day.
+
+- 
