@@ -7,12 +7,6 @@ class SelectedWeeBeastie extends React.Component {
 
   render() {
 
-    // trying to see if putting all the props outside the modal helps me read it better
-
-    // BeastModals
-    const show = this.props.showModal
-    // const onHide = this.props.closeModal
-    const handleClose = this.props.handleClose
     
 
     return ( 
