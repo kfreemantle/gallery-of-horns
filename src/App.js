@@ -63,7 +63,7 @@ class App extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(this.state.howToSortSelected);
     if (this.state.howToSortSelected === 'all') {
       this.setState({ filterData: data})  // I know this DOES work, I don't know why though
     
@@ -116,7 +116,7 @@ class App extends React.Component {
             />
           <Row>
             <Main 
-              data={data} 
+              data={this.state.filterData} 
               handleOpenModal={this.handleOpenModal} />
           </Row>
         </Container>
